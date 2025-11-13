@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Be My Valentine?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fecfef);
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 3em;
+      color: #e91e63;
+    }
+    p {
+      font-size: 1.5em;
+      margin: 20px;
+    }
+    button {
+      background: #e91e63;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+    }
+    button:hover {
+      background: #d81b60;
+      transform: scale(1.1);
+    }
+    .heart {
+      font-size: 2em;
+      color: #e91e63;
+      animation: beat 1s infinite;
+    }
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Will You Be My Valentine? 💘</h1>
+  <p>You make my world brighter every single day.</p>
+  <button onclick="sayYes()">Yes 💖</button>
+  <button onclick="sayNo()">No 😢</button>
+
+  <p id="response" class="heart"></p>
+
+  <script>
+    function sayYes() {
+      document.getElementById('response').textContent = "Yay! I knew you'd say yes! ❤️";
+    }
+
+    function sayNo() {
+      document.getElementById('response').textContent = "Aww... maybe next time 😞";
+    }
+  </script>
+
+</body>
+</html>
